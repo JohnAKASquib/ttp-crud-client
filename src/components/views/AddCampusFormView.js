@@ -38,7 +38,6 @@ const AddCampusFormView = (props) => {
             value={props.imageUrl}
             name="imageUrl"
             onChange={props.handleChange}
-            required
           ></input>
         </div>
         <button>Create Campus</button>

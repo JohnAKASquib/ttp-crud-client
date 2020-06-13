@@ -17,7 +17,14 @@ const CampusView = (props) => {
 
   return (
     <>
-      <img src={props.campus.imageUrl} alt={props.campus.name} />
+      <img
+        src={
+          props.campus.imageUrl === ""
+            ? "https://via.placeholder.com/480x240?text=Placeholder"
+            : props.campus.imageUrl
+        }
+        width="200px"
+      />
       <h1>{props.campus.name}</h1>
       <h3>{props.campus.address}</h3>
 

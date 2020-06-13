@@ -15,8 +15,18 @@ const AllCampusesView = (props) => {
           <Link to={`/campuses/${campus.id}`}>
             <h1>{campus.name}</h1>
           </Link>
-          <img src={campus.imageUrl} width="200px" alt={campus.name} />
-          <p>{campus.students.length} students</p>
+          <img
+            src={
+              campus.imageUrl === ""
+                ? "https://via.placeholder.com/480x240?text=Placeholder"
+                : campus.imageUrl
+            }
+            width="200px"
+          />
+          <p>
+            {campus.students === undefined ? 0 : campus.students.length}{" "}
+            students
+          </p>
           <button onClick={() => props.handleDelete(campus.id)}>Delete</button>
         </div>
       ))}
